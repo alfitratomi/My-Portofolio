@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="styleSheet" href="style.css">
+    <title>Lampu alfitra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav class="navbar bg-light" style="background: linear-gradient(to right, #455eeb, #cfebfc)">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+            </a>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+
+
+    <div class="countainer   bg-blue-200">
+        <div class="row  bg-gray-500 m-2 d-flex">
+
+            <div class="col bg-gray-300 m-1 text-center">
+                <!-- LAMPU UNTUK RUANG TAMU 1-3 -->
+                <h4>RUANG TAMU</h4>
+
+                <!-- toggle  -->
+                <div class="form-check form-switch ">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">
+                        <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                            id="default-toggleTamu" />
+                    </label>
+                </div>
+                <!-- toggle end  -->
+
+                <div class="ruang-keluarga d-flex ">
+                    <!--Lampu1-->
+                    <div class="flex flex-col gap-4 items-center col-md-4">
+                        <img src="assets/images/off.gif" alt="" id="lampu1" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle1" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <!--Lampu2-->
+                    <div class="flex flex-col gap-4 items-center col-md-4">
+                        <img src="assets/images/off.gif" alt="" id="lampu2" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle2" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <!--Lampu3-->
+                    <div class=" flex flex-col gap-4 items-center col-md-4">
+                        <img src="assets/images/off.gif" alt="" id="lampu3" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle3" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- LAMPU UNTUK RUANG TAMU LAMPU 1-3 END -->
+
+
+            <!-- LAMPU UNTUK RUANG TIDUR LAMPU 4 -->
+
+            <div class="ruang-tamu bg-green-500 text-center">
+                <h4>RUANG TIDUR</h4>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">
+                        <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                            id="default-toggleTidur" />
+                    </label>
+                </div>
+
+                <div class="ruang-tidur d-flex ">
+                    <!--Lampu4-->
+                    <div class="flex flex-col gap-4 items-center col-md-12">
+                        <img src="assets/images/off.gif" alt="" id="lampu4" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle4" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- LAMPU UNTUK RUANG TIDUR LAMPU 4 END -->
+
+            <!-- LAMPU UNTUK RUANG MAKAN LAMPU 5-6  -->
+
+            <div class="ruang-tamu bg-green-300 m-1 text-center">
+                <h4>RUANG MAKAN</h4>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">
+                        <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                            id="default-toggleMakan" />
+                    </label>
+                </div>
+
+                <div class="ruang-makan  d-flex gap-4">
+                    <!--Lampu5-->
+                    <div class="flex flex-col gap-4 items-center col-md-6">
+                        <img src="assets/images/off.gif" alt="" id="lampu5" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle5" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <!--Lampu6-->
+                    <div class="flex flex-col gap-4  items-center col-md-6">
+                        <img src="assets/images/off.gif" alt="" id="lampu6" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle6" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- LAMPU UNTUK RUANG MAKAN LAMPU 5-6 END  -->
+
+            <!-- LAMPU UNTUK RUANG KELUARGA LAMPU 7-10  -->
+
+            <div class=" ruang-tamu bg-green-400 m-1 text-center">
+                <h4>RUANG KELUARGA</h4>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">
+                        <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                            id="default-toggleKeluarga" />
+                    </label>
+                </div>
+                <div class="ruang-keluarga d-flex gap-4">
+                    <!--Lampu7-->
+                    <div class="flex flex-col gap-4  items-center col-md-3">
+                        <img src="assets/images/off.gif" alt="" id="lampu7" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle7" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <!--Lampu8-->
+                    <div class="flex flex-col gap-4 items-center col-md-3">
+                        <img src="assets/images/off.gif" alt="" id="lampu8" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle8" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <!--Lampu9-->
+                    <div class="flex flex-col gap-4 items-center col-md-3">
+                        <img src="assets/images/off.gif" alt="" id="lampu9" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle9" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <!--Lampu10-->
+                    <div class="flex flex-col gap-4  items-center col-md-3">
+                        <img src="assets/images/off.gif" alt="" id="lampu10" />
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                <input class="form-check-input" onchange="saklar()" type="checkbox" role="switch"
+                                    id="default-toggle10" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- LAMPU UNTUK RUANG KELUARGA LAMPU 7-10 END  -->
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!-- ini adalah script js -->
+    <script src="saklar.js" type="application/javascript"> </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SCRIPT BOORSTRAP -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- SCRIPT BOORSTRAP NEND -->
+
+</body>
+
+</html>
