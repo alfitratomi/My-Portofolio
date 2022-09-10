@@ -219,13 +219,7 @@
             </li>
         </ul>
     </div>
-
-
     <!-- KONTAK SAYA END -->
-
-
-
-
 
     <!-- FOOTER -->
     <div class="countainer text-center" style="background: #cfebfc;">
@@ -233,80 +227,24 @@
     </div>
     <!-- FOOTER END -->
 
-
-
-
-
-
-
-
-
-
-
-
     <!-- SCRIPT BOORSTRAP -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <!-- SCRIPT BOORSTRAP NEND -->
-
-
-    <!-- Script Contact Form -->
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx_FcljChRBrxEGSoKvy3gI_hU2Wh7DUy2So1chn6KfQ7hzoTTucPgSm4TZQ9vDcuot/exec'
-        const form = document.forms['tom-contact-form']
-        const btnKirim = document.getElementById("btnKirim");
-        const btnLoading = document.getElementById("btnLoading");
-        const myAlert = document.getElementById("myAlert");
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            //Ketika tombol submit di klik 
-            //tampilkan tobol loading, hilangkan tombol kirim
-            btnLoading.classList.toggle('d-none')
-            btnKirim.classList.toggle('d-none')
-
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-
-                    //tampilkan tobol kirim, hilangkan tombol loading
-                    btnLoading.classList.toggle('d-none')
-                    btnKirim.classList.toggle('d-none')
-
-                    //tampilkan alert
-                    myAlert.classList.toggle('d-none')
-
-                    // mereset from
-                    form.reset();
-                    console.log('Success!', response)
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
-    <!-- Script Contact Form end-->
+    <!-- SCRIPT BOORSTRAP END -->
 
     <!-- script AOS Start -->
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-        });
-    </script>
-
-    <!-- script AOS Start -->
-
+    <!-- script AOS End -->
+    
+    <!-- script GSAP Start -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/TextPlugin.min.js"></script>
-    <script>
-        gsap.registerPlugin(TextPlugin);
-        gsap.to(".lead", { duration: 2, delay: 1.5, text: 'Lulusan Universitas Putra Indonesia YPTK Padang'});
-        gsap.from('.jumbotron img', { duration: 1, y: -100, opacity: 0, ease: 'bounce' })
-        gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce' })
-        gsap.from('.display-4', { duration: 1.5, x: -50, opacity: 0, ease: 'back' })
-    </script>
+    <!-- script GSAP End -->
 
+    <script src="Form.js"></script>
+    <script src="AOS.js"></script>
+    <script src="GSAP.js"></script>
 </body>
 
 </html>
